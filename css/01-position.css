@@ -1,0 +1,238 @@
+/* Относительное позиционирование */
+/* .container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-white-color);
+  outline: 1px dashed var(--primary-text-color);
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  flex-shrink: 0;
+
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.box + .box {
+  margin-left: 30px;
+}
+
+.box:nth-of-type(1) {
+  background-color: teal;
+}
+
+.box:nth-of-type(2) {
+  background-color: orange;
+}
+
+.box:nth-of-type(3) {
+  background-color: palevioletred;
+}
+
+.box.relative {
+  position: relative;
+  top: 100px;
+  left: 100px;
+} */
+
+/* Абсолютное позиционирование */
+/* Мой пример */
+/* .container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-white-color);
+  outline: 1px dashed var(--primary-text-color);
+}
+
+.thumb {
+  position: relative;
+  width: 200px;
+  height: 200px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.thumb:not(:last-child) {
+  margin-right: 30px;
+}
+
+.thumb:nth-child(1) {
+  border: 1px solid #006501;
+  background-image: url("../img/celtic-logo.jpg");
+}
+
+.thumb:nth-child(2) {
+  border: 1px solid #0a2a6f;
+  background-image: url("../img/manUn-logo.jpg");
+}
+
+.thumb:nth-child(3) {
+  border: 1px solid #4d090a;
+  background-image: url("../img/arsenal-logo.jpg");
+}
+
+.label {
+  position: absolute;
+  font-weight: 700;
+  padding: 4px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: var(--primary-white-color);
+  border-radius: 4px;
+  color: var(--primary-white-color);
+}
+
+.label.center {
+  top: 85px;
+  left: 75px;
+  color: #006501;
+  border: 2px dashed #006501;
+}
+
+.label.right {
+  top: 0;
+  right: 0;
+  color: #f00102;
+  border: 1px solid #0a2a6f;
+}
+
+.label.left {
+  bottom: 0;
+  left: 0;
+  color: #f00107;
+  border: 1px solid #4d090a;
+} */
+
+/* Пример на курсах */
+/* .container {
+  display: flex;
+  padding: 20px;
+}
+
+.thumb {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.thumb + .thumb {
+  margin-left: 20px;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2196f3;
+  max-width: max-content;
+  padding: 8px 16px;
+
+  font-size: 24px;
+  color: var(--primary-white-color);
+  border-bottom-left-radius: 4px;
+} */
+
+/* Фиксированное позиционирование */
+/* .chat-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  width: 64px;
+  height: 64px;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1653/1653630.png");
+  background-size: contain;
+  cursor: pointer;
+} */
+
+/* Липкое позиционирование */
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  position: sticky;
+  top: -1px;
+
+  padding: 16px;
+  background-color: #ccc;
+  text-align: center;
+  text-transform: uppercase;
+
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.section:nth-of-type(1) > .section-title {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
+.section:nth-of-type(2) > .section-title {
+  background-image: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.section:nth-of-type(3) > .section-title {
+  color: #fff;
+  background-image: repeating-radial-gradient(
+    circle,
+    purple,
+    purple 10px,
+    #4b026f 10px,
+    #4b026f 20px
+  );
+}
+
+.section:nth-of-type(4) > .section-title {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    to right,
+    #ff8a00,
+    #ff8a00 10px,
+    #e52e71 10px,
+    #e52e71 20px
+  );
+}
+
+.section-text {
+  font-size: 18px;
+}
